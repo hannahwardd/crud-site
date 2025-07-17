@@ -1,20 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="7d81f8c3-e557-4dba-af5d-39dbcbf38b71" name="Changes" comment="" />
+    <list default="true" id="7d81f8c3-e557-4dba-af5d-39dbcbf38b71" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/componenets/CreatePet.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/componenets/Pet.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/crud/create.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/crud/delete.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/crud/helpers.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/crud/read.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/crud/update.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
-  <component name="KubernetesApiProvider"><![CDATA[{
-  "isMigrated": true
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2zzF3645muCElOBGetLinIrJkpO" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -23,7 +48,14 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
     "junie.onboarding.icon.badge.shown": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "vue.rearranger.settings.migration": "true"
   }
@@ -44,7 +76,11 @@
       <option name="presentableId" value="Default" />
       <updated>1752725792797</updated>
       <workItem from="1752725793973" duration="3000" />
+      <workItem from="1752725799474" duration="1245000" />
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
