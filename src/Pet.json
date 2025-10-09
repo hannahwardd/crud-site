@@ -1,0 +1,14 @@
+[
+  {
+    "name": "Billy",
+    "age": 2.5,
+    "type": "Dog",
+    "breed": "poodle"
+  },
+  {
+    "name": "Muppet",
+    "age": 7,
+    "type": "Cat",
+    "breed": "Domestic short hair"
+  }
+]

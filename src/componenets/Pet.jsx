@@ -1,19 +1,32 @@
 import React from 'react';
+import "../App.css"
+import {PetQuickDetails} from "./PetQuickDetails";
 
-export default function Pet(props) {
-    return (
-            <div className="border p-4 rounded shadow mb-4">
-                <h2 className="text-xl font-bold">{props.name} ({props.type})</h2>
-                <img
-                        src={props.imageId}
-                        alt={props.name}
-                        className="w-32 h-32 object-cover my-2"
-                />
-                <p>Breed: {props.breed}</p>
-                <p>Age: {props.age}</p>
-                <p>Gender: {props.gender}</p>
-                <p>Color: {props.color}</p>
-                <p>Price: ${props.price}</p>
-            </div>
-    );
+export default function Pet({id, name, age, breed, type, imageId, onDelete}) {
+    let color = "#fffaeb"
+
+    if (type === "cat") {
+        color = "#ebfbff"
+    }
+    else if (type === "bunny") {
+        color = "#e7e0ff"
+    }
+
+    return (<div className="pet-div" style={{backgroundColor: color}}>
+        <img
+            src={imageId}
+            alt={name}
+            className="pet-img"
+        />
+        <div className="pet-name">
+            <h1>{name}</h1>
+        </div>
+        <p>{name} is a {age} year old {breed} {type} available for adoption.</p>
+        <div className="pet-name">
+            <PetQuickDetails pet={{id, name, age, breed, type, imageId}}/>
+        </div>
+        <button onClick={() => onDelete(id)}>
+            DELETE PET
+        </button>
+    </div>);
 }
