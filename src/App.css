@@ -63,6 +63,17 @@
     padding: 3px;
 }
 
+.pet-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.body {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
 
 
 

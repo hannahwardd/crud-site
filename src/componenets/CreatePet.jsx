@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { Button, FormControl, InputAdornment, InputLabel, MenuItem, Select, TextField } from "@mui/material";
 
 export default function CreatePet({ onAddPet }) {
+
+    //this is the default that the form will show
     const [formData, setFormData] = useState({
         name: '',
         type: 'dog',
@@ -14,6 +16,7 @@ export default function CreatePet({ onAddPet }) {
         storeId: '',
     });
 
+    //this handles the changes in the form, ignore
     function handleChange(e) {
         const { name, value } = e.target;
         setFormData(prev => ({
@@ -22,11 +25,15 @@ export default function CreatePet({ onAddPet }) {
         }));
     }
 
+    //this handles the changes in the form, ignore
     function handleDropDownChange(e) {
         const { name, value } = e.target;
         setFormData(prev => ({ ...prev, [name]: value }));
     }
 
+    //this handles creating a new pet when tyou click SUBMIT. It generates a random id for the pet
+    //and then calls the onAddPet function to add the pet to the list of pets
+    //it also resets the form
     function handleSubmit(e) {
         e.preventDefault();
         const newPet = { ...formData, id: crypto.randomUUID(), health: 100, maxAge: 15 };
@@ -47,9 +54,9 @@ export default function CreatePet({ onAddPet }) {
     }
 
     return (
-            <form onSubmit={handleSubmit} className="space-y-4 border p-4 rounded">
+            <div className="pet-form">
+            <form onSubmit={handleSubmit}>
                 <h2 className="text-lg font-bold">Create New Pet</h2>
-
                 <TextField name="name" label="Name" variant="outlined" value={formData.name} onChange={handleChange} />
 
                 <FormControl>
@@ -110,5 +117,6 @@ export default function CreatePet({ onAddPet }) {
 
                 <Button type="submit" variant="outlined" style={{ height: "56px" }}>Add Pet</Button>
             </form>
+            </div>
     );
 }
