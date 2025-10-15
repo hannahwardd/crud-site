@@ -1,6 +1,7 @@
-import {getData} from "./helpers";
+import {getData, saveData} from "./helpers";
 
-function deletePet(id) {
+export function deletePet(id) {
     const pets = getData("pets").filter(p => p.id !== id);
     saveData("pets", pets);
+    return pets;
 }

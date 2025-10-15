@@ -12,7 +12,8 @@ export default function Pet({id, name, age, breed, type, imageId, onDelete}) {
         color = "#e7e0ff"
     }
 
-    return (<div className="pet-div" style={{backgroundColor: color}}>
+    return (
+            <div className="pet-div" style={{backgroundColor: color}}>
         <img
             src={imageId}
             alt={name}
@@ -25,8 +26,6 @@ export default function Pet({id, name, age, breed, type, imageId, onDelete}) {
         <div className="pet-name">
             <PetQuickDetails pet={{id, name, age, breed, type, imageId}}/>
         </div>
-        <button onClick={() => onDelete(id)}>
-            DELETE PET
-        </button>
+        <button onClick={() => onDelete(id)}>Delete</button>
     </div>);
 }

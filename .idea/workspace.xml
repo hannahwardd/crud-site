@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d81f8c3-e557-4dba-af5d-39dbcbf38b71" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Pet.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/componenets/PetInfoTag.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/componenets/PetQuickDetails.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/componenets/CreatePet.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componenets/CreatePet.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/componenets/Pet.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componenets/Pet.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crud/create.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crud/create.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crud/delete.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crud/delete.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crud/read.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crud/read.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/crud/update.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/crud/update.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +97,9 @@
       <workItem from="1754538065485" duration="5605000" />
       <workItem from="1754554737000" duration="1274000" />
       <workItem from="1759978127002" duration="757000" />
-      <workItem from="1759978939440" duration="192000" />
+      <workItem from="1759978939440" duration="3561000" />
+      <workItem from="1760040180377" duration="341000" />
+      <workItem from="1760557192395" duration="1385000" />
     </task>
     <servers />
   </component>

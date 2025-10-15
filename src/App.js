@@ -1,62 +1,68 @@
 import React, {useEffect, useState} from 'react';
 import Pet from './componenets/Pet';
 import NewPetForm from './componenets/CreatePet';
-import {Button} from "@mui/material";
 import {getAllPets} from "./crud/read";
+import {createPet } from "./crud/create";
+import {deletePet} from "./crud/delete";
+import {Button} from "@mui/material";
 
 export default function App() {
 
-    //this is where we store all the pets
+    // we store all the pets here
     const [pets, setPets] = useState([]);
+    //we store the filter here
+    const [filter, setFilter] = useState('all'); // 'all', 'cat', 'dog', 'bunny'
 
-    //you can ignore this, it deals with the database
+    // this loads the pets from localStorage when the site loads
     useEffect(() => {
-        const stored = JSON.parse(localStorage.getItem('pets') || '[]');
+        const stored = getAllPets();
         setPets(stored);
     }, []);
 
-    //this is some code that will add a pet to a list, when run
-    function handleAddPet(newPet) {
-        const updated = [...pets, newPet];
-        localStorage.setItem('pets', JSON.stringify(updated));
-        setPets(updated);
-    }
 
-    //this is some code that will remove a pet from a list, when run
-    function handleDeletePet(id) {
-        const updatedPets = pets.filter(p => p.id !== id);
-        localStorage.setItem('pets', JSON.stringify(updatedPets));
-        setPets(updatedPets);
-    }
+    // React sites are REACTIVE! So if you update the state, the UI will update.
+    // When we put something in the data base, this doesn't change the state, we need to do that too.
+    const handleAddPet = (pet) => {
+        const updatedPets = createPet(pet); // save the pet to localStorage, and return the updated list
+        setPets(updatedPets); // update state to trigger rerender
+    };
 
-    //TODO make the buttons filter the pets! How can you use this?
-    const cats = pets.filter(pet => pet.type === 'cat');
-    const dogs = pets.filter(pet => pet.type === 'dog');
-    const bunnies = pets.filter(pet => pet.type === 'bunny');
+    // Same as above, but for deleting a pet
+    const handleDeletePet = (id) => {
+        const updatedPets = deletePet(id); //delete from localStorage
+        setPets(updatedPets); // update state
+    };
 
+    // down below, when we call cats.map, it will check if we are on the ALL tab, or the CATs tabs. If it is neither, no cats will be shown.
+    // the same applies for dogs and bunnies.
+    const cats = filter === 'all' || filter === 'cat' ? pets.filter(p => p.type === 'cat') : [];
+    const dogs = filter === 'all' || filter === 'dog' ? pets.filter(p => p.type === 'dog') : [];
+    const bunnies = filter === 'all' || filter === 'bunny' ? pets.filter(p => p.type === 'bunny') : [];
 
     return (<div>
-        <div className="header">
-            <h1>My Pet Shop</h1>
-            <div className='pet-detail'>
-                <Button variant='contained' style={{height: "56px", margin: "10px", backgroundColor: "antiquewhite", color: "black"}} onClick={() => setPets(cats)}>Cats</Button>
-                <Button variant='contained' style={{height: "56px", margin: "10px", backgroundColor: "antiquewhite", color: "black"}} onClick={() => setPets(dogs)}>Dogs</Button>
-                <Button variant='contained' style={{height: "56px", margin: "10px", backgroundColor: "antiquewhite", color: "black"}} onClick={() => setPets(bunnies)}>Bunnies</Button>
-                <Button variant='contained' style={{height: "56px", margin: "10px", backgroundColor: "antiquewhite", color: "black"}} onClick={() => setPets(getAllPets())}>All</Button>
-            </div>
-        </div>
-        <NewPetForm onAddPet={handleAddPet}/>
-        <h1>All Pets ready for a new home</h1>
-        <div className="overflow-row">
-            <div className="flex-column">
-                {cats.map((cat) => (<Pet {...cat} onDelete={handleDeletePet}/>))}
-            </div>
-            <div className="flex-column">
-                {dogs.map((dog) => (<Pet {...dog} onDelete={handleDeletePet}/>))}
-            </div>
-            <div className="flex-column">
-                {bunnies.map((bunny) => (<Pet {...bunny} onDelete={handleDeletePet}/>))}
-            </div>
-        </div>
-    </div>);
+                <div className="header">
+                    <h1>My Pet Shop</h1>
+                    <div className='pet-detail'>
+                        <Button onClick={() => setFilter('cat')}>Cats</Button>
+                        <Button onClick={() => setFilter('dog')}>Dogs</Button>
+                        <Button onClick={() => setFilter('bunny')}>Bunnies</Button>
+                        <Button onClick={() => setFilter('all')}>All</Button>
+                    </div>
+                </div>
+
+                <NewPetForm onAddPet={handleAddPet}/>
+
+                <h1>All Pets ready for a new home</h1>
+                <div className="overflow-row">
+                    <div className="flex-column">
+                        {cats.map(cat => <Pet key={cat.id} {...cat} onDelete={handleDeletePet}/>)}
+                    </div>
+                    <div className="flex-column">
+                        {dogs.map(dog => <Pet key={dog.id} {...dog} onDelete={handleDeletePet}/>)}
+                    </div>
+                    <div className="flex-column">
+                        {bunnies.map(bunny => <Pet key={bunny.id} {...bunny} onDelete={handleDeletePet}/>)}
+                    </div>
+                </div>
+            </div>);
 }

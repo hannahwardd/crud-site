@@ -1,6 +1,7 @@
 import {getData} from "./helpers";
 
 export function getAllPets() {
+    console.log(getData("pets"));
     return getData("pets");
 }
 

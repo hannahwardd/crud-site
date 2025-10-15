@@ -1,6 +1,6 @@
-import {getData} from "./helpers";
+import {getData, saveData} from "./helpers";
 
-function updatePet(id, updates) {
+export function updatePet(id, updates) {
     const pets = getData("pets").map(p =>
             p.id === id ? { ...p, ...updates } : p
     );
