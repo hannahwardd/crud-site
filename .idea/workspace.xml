@@ -5,15 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7d81f8c3-e557-4dba-af5d-39dbcbf38b71" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/PetDetails.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/componenets/CreatePet.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componenets/CreatePet.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/componenets/Pet.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/componenets/Pet.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -100,7 +94,8 @@
       <workItem from="1759978127002" duration="757000" />
       <workItem from="1759978939440" duration="3561000" />
       <workItem from="1760040180377" duration="341000" />
-      <workItem from="1760557192395" duration="3934000" />
+      <workItem from="1760557192395" duration="4619000" />
+      <workItem from="1760573275798" duration="571000" />
     </task>
     <servers />
   </component>

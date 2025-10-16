@@ -32,7 +32,9 @@ export default function Home() {
         setPets(updatedPets); // update state
     };
 
-    // down below, when we call cats.map, it will check if we are on the ALL tab, or the CATs tabs. If it is neither, no cats will be shown.
+    // down below, when we call cats.map, it will check if we are on the ALL tab, or the CAT tabs.
+    // If it is neither, no cats will be shown, it will defualt to an empty list.
+    // the code reads as "if filter equals all or filter equals cat, then/? filter pets by type equals cat, otherwise/else/: cats should be empty"
     // the same applies for dogs and bunnies.
     const cats = filter === 'all' || filter === 'cat' ? pets.filter(p => p.type === 'cat') : [];
     const dogs = filter === 'all' || filter === 'dog' ? pets.filter(p => p.type === 'dog') : [];
@@ -53,7 +55,7 @@ export default function Home() {
 
         <div className="body">
             <h1>All Pets ready for a new home</h1>
-            <div className="overflow-row">
+            <div className="flex-row">
                 <div className="flex-column">
                     {cats.map(cat => <Pet key={cat.id} {...cat} onDelete={handleDeletePet}/>)}
                 </div>
@@ -67,3 +69,5 @@ export default function Home() {
         </div>
     </div>);
 }
+
+

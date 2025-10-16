@@ -33,7 +33,7 @@
     margin: 10px;
 }
 
-.overflow-row {
+.flex-row {
     display: flex;
     align-items: start;
     justify-content: space-evenly;
